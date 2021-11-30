@@ -1,0 +1,29 @@
+query plans($locationAcronym: String!) {
+  allPlans(acronym: $locationAcronym) {
+    id
+    name
+    description
+    price
+    plusKind
+    displayName
+    chargeOnOrder
+    discount {
+      id
+      amount
+      kind
+    }
+    itemFinalPrice
+    initialInvestment {
+      id
+      displayName
+      name
+      price
+      itemFinalPrice
+      discount {
+        id
+        amount
+        kind
+      }
+    }
+  }
+}

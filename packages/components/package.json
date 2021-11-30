@@ -1,0 +1,52 @@
+{
+  "name": "@project/components",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "main:src": "src/index.js",
+  "scripts": {
+    "test": "react-scripts test",
+    "lint": "eslint src/** --ignore-pattern 'node_modules/*' --ignore-pattern 'public/*' --max-warnings=0 --format=codeframe"
+  },
+  "dependencies": {
+    "@project/core": "1.0.0",
+    "@react-workspaces/react-scripts": "^3.4.0-alpha-01",
+    "chroma-js": "^2.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "recompose": "^0.30.0",
+    "styled-components": "^5.0.1",
+    "tinycolor2": "^1.4.2",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "6.0.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-react-app": "^5.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prop-types": "^15.7.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!src/setupTests.{js}",
+      "!src/serviceWorker.{js}",
+      "!src/**/*.(spec|test|stories).{js}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 0,
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  allLocations(onlineSale: true) {
+    acronym
+    name
+  }
+}
