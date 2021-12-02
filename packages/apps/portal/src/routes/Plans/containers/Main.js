@@ -8,7 +8,8 @@ import { connectState, injectActions, displayWhen, dispatchOnMount, dispatchOnUn
 
 import { actions, reducer, saga, MODULE_NAME } from '../modules'
 
-import PlansComponent from '../components/Plans'
+import SelectLocation from '../components/SelectLocation'
+// import PlansComponent from '../components/Plans'
 import Ghost from '../components/Ghost'
 
 const enhancer = compose(
@@ -23,4 +24,5 @@ const enhancer = compose(
   displayWhen(({ list }) => !R.isEmpty(list), Ghost),
 )
 
-export default enhancer(PlansComponent)
+export default enhancer(SelectLocation)
+// export default enhancer(PlansComponent)

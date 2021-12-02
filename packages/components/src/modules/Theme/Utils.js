@@ -35,6 +35,14 @@ export const GlobalTheme = createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.scrollbar}; 
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+  }
+
 `
 
 export const Ellipsis = css`
