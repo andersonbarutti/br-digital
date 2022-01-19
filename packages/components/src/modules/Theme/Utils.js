@@ -11,6 +11,10 @@ export const GlobalTheme = createGlobalStyle`
     min-height: 100%;
     height: 100%;
   }
+
+  * {
+    box-sizing: border-box;
+  }
   
   body {
     background: ${({ theme }) => theme.colors.background};

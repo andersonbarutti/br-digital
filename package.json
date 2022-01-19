@@ -21,7 +21,6 @@
       "**/babel-jest"
     ]
   },
-
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "yarn lint -- -- --fix"

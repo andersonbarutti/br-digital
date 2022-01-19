@@ -40,7 +40,7 @@ export default function Footer() {
         </S.Top>
         <S.Divider size={1} />
         <S.Bottom>
-          <div>
+          <S.Actions>
             <S.Links>
               <S.MenuItem>
                 <S.MenuItemLink>Trabalhe conosco</S.MenuItemLink>
@@ -56,14 +56,14 @@ export default function Footer() {
               </S.MenuItem>
             </S.Links>
             <S.Copyright>Copyright © 2021 Academia Bio Ritmo</S.Copyright>
-          </div>
+          </S.Actions>
           <S.AppContent>
             <S.AppContentTitle>
               Conheça nosso App! Baixe agora:
             </S.AppContentTitle>
             <S.Stores>
-              <img src={Apple} alt='appstore' width={112} height={36} />
-              <img src={Google} alt='googleplay' width={112} height={36} />
+              <img src={Apple} alt='appstore' width={122} height={36} />
+              <img src={Google} alt='googleplay' width={122} height={36} />
             </S.Stores>
           </S.AppContent>
         </S.Bottom>

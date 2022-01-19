@@ -1,8 +1,7 @@
 import styled from 'styled-components'
+import { media } from '@project/components'
 
 export const Container = styled.div`
-  bottom: 0;
-  position: absolute;
   width: 100%;
   background: ${props => props.theme.colors.painelBackground};
   color: ${props => props.theme.colors.onBackground};
@@ -11,23 +10,33 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-  flex: 1;
-  padding: 26px 0;
+  max-width: 1040px;
+  width: 100%;
   justify-content: center;
   align-items: center;
 `
 export const Top = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding: 26px 25px;
+
+  ${media.mobile} {
+    grid-template-columns: none;
+    grid-template-rown: auto auto auto;
+    padding: 42px 49px;
+  }
 `
 export const Logo = styled.a`
   :hover {
     cursor: pointer;
   }
 `
-export const Menu = styled.nav``
+export const Menu = styled.nav`
+  ${media.mobile} {
+    max-width: 335px;
+    padding: 49px 0;
+  }
+`
 
 export const MenuList = styled.ul`
   display: grid;
@@ -46,37 +55,73 @@ export const MenuItemLink = styled.a`
   }
 `
 export const Divider = styled.hr`
-  margin: 40px 0px;
   color: ${props => props.theme.colors.white};
+  opacity: 0.3;
 `
 export const Bottom = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-  padding-left: 15%;
-  padding-right: 15%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 26px 25px;
+  
+  ${media.mobile} {
+    flex-direction: column-reverse;
+    padding: 42px 49px;
+  }
 `
+
+export const Actions = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 170px;
+
+  ${media.mobile} {
+    margin-right: 0;
+  }
+`
+
 export const Links = styled.ul`
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-between;
+
+  ${media.mobile} {
+    flex-wrap: wrap;
+
+    ${MenuItem} {
+      margin-bottom: 12px;
+      width: 50%;
+      padding: 0px 0 20px;
+    }
+  }
 `
 export const Copyright = styled.p`
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
 `
 export const AppContent = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 259px;
 `
 export const AppContentTitle = styled.span`
   font-size: 14px;
-  grid-column: span 2;
-  justify-self: center;
+  margin-bottom: 17px;
 `
 export const Stores = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+
+  img {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  ${media.mobile} {
+    margin-bottom: 56px;
+  }
 `
