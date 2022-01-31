@@ -7,6 +7,7 @@ query plans($locationAcronym: String!) {
     plusKind
     displayName
     chargeOnOrder
+    bestSeller
     discount {
       id
       amount

@@ -1,6 +1,19 @@
 import styled from 'styled-components'
 import { media } from '@project/components'
 import ArrowIcon from './assets/arrow.png'
+import HeaderBg from './assets/br.png'
+
+export const modalCustomStyles = {
+  content: {
+    width: '382px',
+    height: '318px',
+    zIndex: '9999',
+  },
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    zIndex: '9999',
+  }
+}
 
 export const Container = styled.div`
   display: flex;
@@ -15,9 +28,13 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(${HeaderBg});
+  background-repeat: no-repeat;
+  background-position: right;
 
   ${media.mobile} {
     padding: 40px 24px 96px;
+    background-image: none !important;
   }
 `
 export const Content = styled.div`
@@ -35,13 +52,17 @@ export const Prev = styled.div.attrs({ className: 'swiper-prev' })`
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
-  /* margin-left: 40px; */
+  cursor: pointer;
   rotate: 180deg;
   transform: rotate(180deg);
 
   @media (max-width: 1190px) {
     width: 50px;
     background-position: center !important;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 
   &.swiper-button-disabled {
@@ -53,12 +74,16 @@ export const Next = styled.div.attrs({ className: 'swiper-next' })`
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 
   @media (max-width: 1190px) {
     width: 50px;
     background-position: center !important;
   }
 
+  &:hover {
+    opacity: 0.8;
+  }
   &.swiper-button-disabled {
     opacity: 0.2;
   }

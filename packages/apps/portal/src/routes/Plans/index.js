@@ -7,7 +7,7 @@ const PlansRoute = () => ({
   element: <Outlet />,
   children: [
     { path: '', element: <Plans /> },
-    { path: 'unidade/:id', element: <Plans branch /> },
+    { path: 'unidade/:slug', element: <Plans branch /> },
   ]
 })
 

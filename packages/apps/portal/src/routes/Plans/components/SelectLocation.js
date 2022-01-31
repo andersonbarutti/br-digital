@@ -1,22 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import PlansFeatures from './PlansFeatures'
+import SelectBranch from './SelectBranch'
 import * as S from './SelectLocation.styles'
-
-export const SelectBranch = ({ title }) => {
-  const navigate = useNavigate()
-
-  return (
-    <S.SelectContainer>
-      <select onChange={() => navigate('unidade/paulista')}>
-        <option>{title || 'Selecionar unidade'}</option>
-        <option>Paulista</option>
-        <option>Santo Amaro</option>
-        <option>Faria Lima</option>
-      </select>
-    </S.SelectContainer>
-  )
-}
 
 export const SelectLocation = () => (
   <S.Container>

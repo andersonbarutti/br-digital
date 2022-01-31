@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import * as S from './Header.styles'
 import Logo from '../assets/biologo.png'
 import MenuIcon from '../assets/menu.png'
@@ -8,7 +8,9 @@ export default function Header() {
   return (
     <S.Container>
       <S.Content>
-      <img src={Logo} alt="bioritmo" width="162" height="27"/>
+      <Link to="/">
+        <img src={Logo} alt="bioritmo" width="162" height="27"/>
+      </Link>
       <S.Nav>
         <S.NavButton>
           <img src={MenuIcon} alt="menu" width="25" height="15"/>

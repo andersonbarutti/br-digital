@@ -101,34 +101,3 @@ export const Subtitle = styled.div`
   max-width: 410px;
   margin-bottom: 52px;
 `
-
-export const SelectContainer = styled.div`
-  position: relative;
-  
-  select {
-    background-color: transparent;
-    color: white;
-    padding: 0;
-    min-width: 250px;
-    border: none;
-    font-size: 22px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    -webkit-appearance: button;
-    appearance: button;
-    font-family: 'Roboto';
-    font-weight: 700;
-    padding-right: 10px;
-    outline: none;
-    text-transform: uppercase;
-
-    option {
-      padding: 30px;
-      color: black;
-    }
-  }
-
-  &:hover::before {
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-`
