@@ -1,3 +1,4 @@
+import { media } from '@project/components'
 import styled from 'styled-components'
 
 export const SelectContainer = styled.div`
@@ -20,6 +21,10 @@ export const SelectContainer = styled.div`
     outline: none;
     text-transform: uppercase;
 
+    ${media.tablet} {
+      font-size: 18px;
+    }
+
     option {
       padding: 30px;
       color: black;
@@ -40,4 +45,8 @@ export const Label = styled.div`
   margin-right: 5px;
   text-transform: uppercase;
   padding: 1px 0;
+
+  ${media.tablet} {
+    font-size: 18px;
+  }
 `

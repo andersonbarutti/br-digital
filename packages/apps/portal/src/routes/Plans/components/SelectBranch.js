@@ -12,7 +12,7 @@ const SelectBranch = (props) => {
   return (
     <S.SelectContainer>
       {slug && <S.Label>Unidade selecionada:</S.Label>}
-      <select onChange={e => navigate(`/unidade/${e.target.value}`)} defaultValue={slug}>
+      <select onChange={e => navigate(`/unidade/${e.target.value}`, { replace: true })} defaultValue={slug}>
         {!slug && <option>Selecionar unidade</option>}
         {list.map(({ acronym, name, slug }) => (
           <option key={acronym} value={slug}>{name}</option>

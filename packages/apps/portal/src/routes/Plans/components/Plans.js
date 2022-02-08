@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -8,7 +8,9 @@ import 'swiper/swiper.min.css'
 
 import PlansFeatures from './PlansFeatures'
 import SelectBranch from './SelectBranch'
+import Ghost from './Ghost'
 import * as S from './Plans.styles'
+import CloseIcon from './assets/close.png'
 
 SwiperCore.use([Navigation])
 
@@ -29,14 +31,19 @@ const breakpoints ={
 }
 
 export const Plans = (props) => {
-  const { list = [] } = props
+  const { list = [], load, slug } = props
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [content, setContent] = useState(null)
 
+  useEffect(() => {
+    load(props)
+    // eslint-disable-next-line
+  }, [slug])
+
   const openModal = ({ description }) => {
-    setContent(description)
-    // setModalIsOpen(true)
+    setContent(description.replace(/##QUEBRAR##/g, ''))	
+    setModalIsOpen(true)
   }
 
   const closeModal = () => {
@@ -44,16 +51,33 @@ export const Plans = (props) => {
     setContent(null)
   }
 
-
+  if (!list.length) {
+    return <Ghost />
+  }
 
   return (
     <S.Container>
       <Modal
         isOpen={modalIsOpen}
-        style={S.modalCustomStyles}
+        contentElement={(props, children) => <S.Modal {...props}>{children}</S.Modal>}
+        overlayElement={(props, children) => <S.Overlay {...props}>{children}</S.Overlay>}
         onRequestClose={closeModal}
       >
-        {content}
+        <S.ModalContainer>
+          <S.ModalHeader>
+            <S.ModalTitle>
+              Regulamento
+            </S.ModalTitle>
+            <S.ModalClose onClick={closeModal}>
+              <img src={CloseIcon} alt='Close' />
+            </S.ModalClose>
+          </S.ModalHeader>
+          <S.ModalBody>
+            <S.ModalContent>
+              {content}
+            </S.ModalContent>
+          </S.ModalBody>
+        </S.ModalContainer>
       </Modal>
       <S.Header>
         <S.Content>

@@ -2,9 +2,9 @@ import React from 'react'
 import * as S from './Footer.styles'
 import Social from './Social'
 
-const Logo = require('../assets/biologo.png')
-const Apple = require('../assets/appstore.png')
-const Google = require('../assets/googleplay.png')
+import Logo from '../assets/biologo.png'
+import Apple from '../assets/appstore.png'
+import Google from '../assets/googleplay.png'
 
 export default function Footer() {
   return (
