@@ -8,6 +8,7 @@ import { useRoutes } from 'react-router-dom'
 import { CoreLayout, MainLayout } from '@project/portal/src/layouts'
 
 import PlansRoutes from './Plans'
+import AuthRoutes from './Auth'
 import { I18nRedirect, NotFound } from './Statics'
 
 const Routes = props => {
@@ -24,6 +25,7 @@ const Routes = props => {
           element: <MainLayout />,
           children: [
             PlansRoutes(),
+            AuthRoutes(),
           ],
         },
         {

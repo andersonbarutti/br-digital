@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Plans from './containers/Main'
 
-const PlansRoute = () => ({
+const PlansRoutes = () => ({
   path: '',
   element: <Outlet />,
   children: [
@@ -11,4 +11,4 @@ const PlansRoute = () => ({
   ]
 })
 
-export default PlansRoute
+export default PlansRoutes

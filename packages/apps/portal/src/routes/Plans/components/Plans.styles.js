@@ -19,6 +19,11 @@ export const Header = styled.div`
   background-image: url(${HeaderBg});
   background-repeat: no-repeat;
   background-position: right;
+  
+  ${media.tablet} {
+    padding: 40px 10px 96px;
+    background-image: none !important;
+  }
 
   ${media.mobile} {
     padding: 40px 24px 96px;

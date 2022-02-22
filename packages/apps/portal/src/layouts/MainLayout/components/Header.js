@@ -16,10 +16,11 @@ export default function Header() {
           <img src={MenuIcon} alt="menu" width="25" height="15"/>
         </S.NavButton>
         <S.NavList>
-          <S.NavItem><S.NavLink>Horários de treinos</S.NavLink></S.NavItem>
-          <S.NavItem><S.NavLink>Unidades</S.NavLink></S.NavItem>
-          <S.NavItem><S.NavLink>Treinos</S.NavLink></S.NavItem>
-          <S.NavItem><S.NavLink>Programas</S.NavLink></S.NavItem>
+          <S.NavItem><S.NavLink to='/'>Horários de treinos</S.NavLink></S.NavItem>
+          <S.NavItem><S.NavLink to='/'>Unidades</S.NavLink></S.NavItem>
+          <S.NavItem><S.NavLink to='/'>Treinos</S.NavLink></S.NavItem>
+          <S.NavItem><S.NavLink to='/'>Programas</S.NavLink></S.NavItem>
+          <S.NavItem><S.NavLink to='/entrar'>Entrar</S.NavLink></S.NavItem>
         </S.NavList>
       </S.Nav>
       </S.Content>

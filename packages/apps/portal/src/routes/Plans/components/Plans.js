@@ -30,7 +30,7 @@ const breakpoints ={
   }
 }
 
-export const Plans = (props) => {
+export const Plans = props => {
   const { list = [], load, slug } = props
 
   const [modalIsOpen, setModalIsOpen] = useState(false)

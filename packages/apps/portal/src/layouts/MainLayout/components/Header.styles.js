@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { media } from '@project/components'
 
 export const Container = styled.div`
@@ -54,9 +55,10 @@ export const NavItem = styled.li`
   text-decoration: none;
   margin-left: 24px;
 `
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   color: ${props => props.theme.colors.white};
   font-size: 14px;
+  text-decoration: none;
   :hover{
     text-decoration: underline;
     cursor: pointer;
