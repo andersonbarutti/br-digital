@@ -28,7 +28,7 @@ const Contract = () => {
               <S.Checkbox>Li e concordo com a <S.Link>política de privacidade</S.Link></S.Checkbox>
               <S.Checkbox>Li e concordo com os <S.Link>termos de adesão</S.Link></S.Checkbox>
             </S.Terms>
-            <S.Button>Assinar contrato</S.Button>
+            <S.Button>ASSINAR CONTRATO</S.Button>
           </S.Footer>
         </S.Content>
         <S.ResumeContainer>

@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 116px 30px;
 `
 export const Main = styled.div`
   display: flex;
@@ -52,17 +53,24 @@ export const Upload = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px 15px;
+  cursor: pointer;
+  
+  &:hover {
+    opacity: 0.8;
+  }
 `
 export const UploadLabel = styled.div`
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
 `
 export const UploadIcon = styled.div`
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 12px;
 `
 
 export const Footer = styled.div`
@@ -72,6 +80,7 @@ export const Footer = styled.div`
 export const Terms = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 `
 
 export const Link = styled.a`
@@ -93,7 +102,21 @@ export const Checkbox = styled.div`
     text-decoration: underline;
   }
 `
-export const Button = styled.div``
+export const Button = styled.div`
+  padding: 9px 46px;
+  background: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.onSecondary};
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  width: fit-content;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+`
 
 export const ResumeContainer = styled.div`
   position: relative;
@@ -101,7 +124,7 @@ export const ResumeContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-left: 1px solid ${props => props.theme.colors.white};
-  padding: 43px 51px;
+  padding: 40px;
   align-items: center;
   background: url(${ResumeBg});
   background-size: cover;
@@ -120,6 +143,9 @@ export const Resume = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `
 export const PlanTitle = styled.div`
   font-size: 18px;

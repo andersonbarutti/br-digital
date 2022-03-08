@@ -24,15 +24,15 @@ export async function doLoad(props) {
 
   console.log(plans, variables)
 
-  // const { data: { allPlans }} = await graphql.query({
-  //   gql: plans,
-  //   variables,
-  // })
+  const { data: { allPlans }} = await graphql.query({
+    gql: plans,
+    variables,
+  })
 
-  // const list = allPlans.map(plan => ({
-  //   ...plan,
-  //   shortDescription: shortDescriptionList[Math.floor(Math.random() * shortDescriptionList.length)]
-  // }))
+  const list = allPlans.map(plan => ({
+    ...plan,
+    shortDescription: shortDescriptionList[Math.floor(Math.random() * shortDescriptionList.length)]
+  }))
 
-  return { list: [] }
+  return { list }
 }
