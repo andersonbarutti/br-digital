@@ -9,6 +9,9 @@ import { CoreLayout, MainLayout } from '@project/portal/src/layouts'
 
 import PlansRoutes from './Plans'
 import AuthRoutes from './Auth'
+import CartRoutes from './Cart'
+import ContractRoutes from './Contract'
+import PhysicalAssessmentRoutes from './PhysicalAssessment'
 import { I18nRedirect, NotFound } from './Statics'
 
 const Routes = props => {
@@ -26,6 +29,9 @@ const Routes = props => {
           children: [
             PlansRoutes(),
             AuthRoutes(),
+            CartRoutes(),
+            ContractRoutes(),
+            PhysicalAssessmentRoutes(),
           ],
         },
         {
