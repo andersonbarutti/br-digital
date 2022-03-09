@@ -11,8 +11,9 @@ const SignIn = () => {
   const navigate = useNavigate()
 
   const handleSignIn = () => {
+    navigate('/cadastrar')
     if (showPassword) {
-      navigate('/')
+      navigate('/cadastrar')
     }
     setShowPassword(true)
   }
@@ -21,7 +22,7 @@ const SignIn = () => {
     <S.Container>
       <FormContainer>
         <S.Field>
-          <Input label='CPF' />
+          <Input label='CPF' disabled={showPassword} />
         </S.Field>
         {
           showPassword && (
@@ -33,7 +34,7 @@ const SignIn = () => {
         
         <S.Actions>
           <Button onClick={handleSignIn}>Entrar</Button>
-          <S.Link to='/cadastrar'>Não tenho cadastro</S.Link>
+          {/* <S.Link to='/cadastrar'>Não tenho cadastro</S.Link> */}
         </S.Actions>
       </FormContainer>
     </S.Container>

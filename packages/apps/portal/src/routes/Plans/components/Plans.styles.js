@@ -19,6 +19,10 @@ export const Header = styled.div`
   background-image: url(${HeaderBg});
   background-repeat: no-repeat;
   background-position: right;
+
+  @media (max-width: 1190px) {
+    background-image: none;
+  }
   
   ${media.tablet} {
     padding: 40px 10px 96px;
@@ -26,7 +30,7 @@ export const Header = styled.div`
   }
 
   ${media.mobile} {
-    padding: 40px 24px 96px;
+    padding: 30px 3px 96px;
     background-image: none !important;
   }
 `
@@ -107,6 +111,10 @@ export const List = styled.div`
       align-items: center;
       justify-content: center;
     }
+
+    ${media.mobile} {
+      width: 286px;
+    }
   }
 `
 
@@ -153,6 +161,10 @@ export const PlanType = styled.div`
   line-height: 21px;
   margin-bottom: 23px;
   text-transform: uppercase;
+
+  ${media.mobile} {
+    font-size: 17px;
+  }
 `
 
 export const Price = styled.div`
