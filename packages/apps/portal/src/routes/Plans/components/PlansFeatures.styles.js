@@ -12,6 +12,7 @@ export const Content = styled.div`
   align-items: center;
   padding: 56px 20px;
   max-width: 1195px;
+  width: 100%;
 
   .swiper {
     width: 100%;
