@@ -16,11 +16,11 @@ export const Content = styled.div`
 
   @media (max-width: 1060px) {
     flex-direction: column;
-    /* display: ${props => (props.isOpen ? 'none' : 'flex')}; */
   }
 `
 export const Main = styled.div`
   flex: 1;
+  display: ${props => (props.isOpen ? 'none' : 'flex')};
 `
 export const Resume = styled.div`
   width: 447px;
@@ -55,13 +55,11 @@ export const TotalResume = styled.div`
   }
 
   @media (max-width: 1060px) {
-    display: flex;
-
     display: ${props => (props.isOpen ? 'none' : 'flex')};
   }
 `
 
-export const Close = styled.div`
+export const Open = styled.div`
   width: 55px;
   height: 4px;
   background-color: #171717;

@@ -5,13 +5,13 @@ import * as S from './CartResume.styles'
 const propTypes = {}
 const defaultProps = {}
 
-export const CartResume = () => {
+export const CartResume = ({ isOpen, setIsOpen }) => {
   const navigate = useNavigate()
 
   return (
     <S.Container>
       <S.Content>
-        <S.Header>
+        <S.Header isOpen={isOpen} onClick={() => setIsOpen(false)}>
           <S.Close />
           <S.Title>Carrinho</S.Title>
         </S.Header>

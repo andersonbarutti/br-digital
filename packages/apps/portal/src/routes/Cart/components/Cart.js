@@ -12,12 +12,12 @@ const Cart = () => {
 
   return (
     <S.Container>
-      <S.Content isOpen={isOpen}>
-        <S.Main>
+      <S.Content>
+        <S.Main isOpen={isOpen}>
           <Form />
         </S.Main>
-        <S.Resume>
-          <CartResume />
+        <S.Resume isOpen={isOpen}>
+          <CartResume setIsOpen={setIsOpen} />
         </S.Resume>
       </S.Content>
       <S.TotalResume onClick={() => setIsOpen(true)} isOpen={isOpen}>
@@ -25,7 +25,7 @@ const Cart = () => {
           <S.TotalTitle>Total</S.TotalTitle>
           <S.TotalPrice>R$ 407,00</S.TotalPrice>
         </S.Total>
-        <S.Close />
+        <S.Open />
       </S.TotalResume>
     </S.Container>
   )
