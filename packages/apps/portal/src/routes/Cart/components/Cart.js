@@ -1,16 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Form from './Form'
+import CartResume from './CartResume'
+
+import * as S from './Cart.styles'
 
 const propTypes = {}
-
 const defaultProps = {}
 
-const Cart = ({ data, t }) => {
+const Cart = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <>
-      {t('title', 'Title fallback')}
-      <br />
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </>
+    <S.Container>
+      <S.Content isOpen={isOpen}>
+        <S.Main>
+          <Form />
+        </S.Main>
+        <S.Resume>
+          <CartResume />
+        </S.Resume>
+      </S.Content>
+      <S.TotalResume onClick={() => setIsOpen(true)} isOpen={isOpen}>
+        <S.Total>
+          <S.TotalTitle>Total</S.TotalTitle>
+          <S.TotalPrice>R$ 407,00</S.TotalPrice>
+        </S.Total>
+        <S.Close />
+      </S.TotalResume>
+    </S.Container>
   )
 }
 

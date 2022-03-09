@@ -8,7 +8,7 @@ import Google from '../assets/googleplay.png'
 
 export default function Footer() {
   return (
-    <S.Container>
+    <S.Container className='app-footer'>
       <S.Content>
         <S.Top>
           <S.Logo>
