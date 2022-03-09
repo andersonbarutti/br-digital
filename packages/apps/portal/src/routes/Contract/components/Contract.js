@@ -53,7 +53,7 @@ const Contract = () => {
               <S.Value>354,00</S.Value>
             </S.Price>
             <S.Details>
-              Acesso em <strong>ALGUMAS</strong> as academias
+              Acesso em <strong>ALGUMAS</strong> academias
             </S.Details>
           </S.Resume>
         </S.ResumeContainer>

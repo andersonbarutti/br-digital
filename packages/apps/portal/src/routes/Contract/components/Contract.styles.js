@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Checkbox as CheckboxComponent } from '@project/portal/src/routes/Auth/components'
 import ResumeBg from './assets/bg.png'
+import { media } from '@project/components'
 
 export const Container = styled.div`
   display: flex;
@@ -10,6 +11,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: 116px 30px;
+
+  ${media.mobile} {
+    align-items: center;
+    padding: 74px 15px;
+  }
 `
 export const Main = styled.div`
   display: flex;
@@ -18,6 +24,11 @@ export const Main = styled.div`
   border: 1px solid ${props => props.theme.colors.white};
   background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.onBackground};
+
+  ${media.mobile} {
+    flex-direction: column;
+    border: none;
+  }
 `
 export const Content = styled.div`
   display: flex;
@@ -25,9 +36,21 @@ export const Content = styled.div`
   padding: 43px 51px;
   width: 100%;
   flex: 1;
+
+  ${media.mobile} {
+    align-items: center;
+    padding: 0 0 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
 `
 export const Header = styled.div`
   margin-bottom: 76px;
+
+  ${media.mobile} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 export const Title = styled.div`
   font-size: 22px;
@@ -77,11 +100,19 @@ export const UploadIcon = styled.div`
 export const Footer = styled.div`
   display: flex;
   flex-direction: column;
+
+  ${media.mobile} {
+    align-items: center;
+  }
 `
 export const Terms = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
+
+  ${media.mobile} {
+    align-items: center;
+  }
 `
 
 export const Link = styled.a`
@@ -136,6 +167,15 @@ export const ResumeContainer = styled.div`
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+
+  ${media.mobile} {
+    width: 100%;
+    align-items: center;
+    background: none;
+    padding: 50px 0;
+    border-left: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
 `
 export const Overlay = styled.div`
   position: absolute;
@@ -168,6 +208,10 @@ export const BranchName = styled.div`
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 41px;
+
+  ${media.mobile} {
+    margin-bottom: 60px;
+  }
 `
 export const Price = styled.div`
   display: flex;
@@ -185,10 +229,20 @@ export const Value = styled.div`
   font-size: 40px;
   line-height: 47px;
   font-weight: 700;
+
+  ${media.mobile} {
+    font-size: 26px;
+  }
 `
 export const Details = styled.div`
   font-size: 16px;
   line-height: 19px;
   font-weight: normal;
   text-align: center;
+
+  ${media.mobile} {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 220px;
+  }
 `
