@@ -2,7 +2,7 @@ import React from 'react'
 import PhysicalAssessment from './containers/Main'
 
 const PhysicalAssessmentRoutes = () => ({
-  path: 'avaliacao',
+  path: 'physical-assessment',
   element: <PhysicalAssessment />,
 })
 

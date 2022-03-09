@@ -1,10 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import * as S from './Contract.styles'
 
 const propTypes = {}
 const defaultProps = {}
 
 const Contract = () => {
+  const navigate = useNavigate()
+
   return (
     <S.Container>
       <S.Main>
@@ -36,7 +39,7 @@ const Contract = () => {
                 />
               </S.Checkbox>
             </S.Terms>
-            <S.Button>ASSINAR CONTRATO</S.Button>
+            <S.Button onClick={() => navigate('/physical-assessment')}>ASSINAR CONTRATO</S.Button>
           </S.Footer>
         </S.Content>
         <S.ResumeContainer>

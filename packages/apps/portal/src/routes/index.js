@@ -11,6 +11,7 @@ import PlansRoutes from './Plans'
 import AuthRoutes from './Auth'
 import CartRoutes from './Cart'
 import ContractRoutes from './Contract'
+import WelcomeRoutes from './Welcome'
 import PhysicalAssessmentRoutes from './PhysicalAssessment'
 import { I18nRedirect, NotFound } from './Statics'
 
@@ -32,6 +33,7 @@ const Routes = props => {
             CartRoutes(),
             ContractRoutes(),
             PhysicalAssessmentRoutes(),
+            WelcomeRoutes(),
           ],
         },
         {

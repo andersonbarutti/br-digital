@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import * as S from './PhysicalAssessment.styles'
 
 const propTypes = {}
@@ -34,6 +35,7 @@ const Question = props => {
 }
 
 export const PhysicalAssessment = () => {
+  const navigate = useNavigate()
   const [physicalAssessment, setPhysicalAssessment] = useState(PhysicalAssessmentList)
 
   const handleChangeAnswer = (id, newAnswer) => {
@@ -62,7 +64,7 @@ export const PhysicalAssessment = () => {
           </S.List>
         </S.Content>
         <S.Footer>
-          <S.Button>CONTINUAR</S.Button>
+          <S.Button onClick={() => navigate('/welcome')}>CONTINUAR</S.Button>
         </S.Footer>
       </S.Main>
     </S.Container>
