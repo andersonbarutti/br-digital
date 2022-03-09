@@ -25,8 +25,16 @@ const Contract = () => {
           </S.UploadContainer>
           <S.Footer>
             <S.Terms>
-              <S.Checkbox>Li e concordo com a <S.Link>política de privacidade</S.Link></S.Checkbox>
-              <S.Checkbox>Li e concordo com os <S.Link>termos de adesão</S.Link></S.Checkbox>
+              <S.Checkbox>
+                <S.CheckboxEl name='privacy' value='privacy'
+                  component={() => <div>Li e concordo com a <S.Link>política de privacidade</S.Link></div>}
+                />
+              </S.Checkbox>
+              <S.Checkbox>
+              <S.CheckboxEl name='terms' value='terms'
+                  component={() => <div>Li e concordo com os <S.Link>termos de adesão</S.Link></div>}
+                />
+              </S.Checkbox>
             </S.Terms>
             <S.Button>ASSINAR CONTRATO</S.Button>
           </S.Footer>

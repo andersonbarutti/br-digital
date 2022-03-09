@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Checkbox as CheckboxComponent } from '@project/portal/src/routes/Auth/components'
 import ResumeBg from './assets/bg.png'
 
 export const Container = styled.div`
@@ -85,6 +86,7 @@ export const Terms = styled.div`
 
 export const Link = styled.a`
   color: ${props => props.theme.colors.white};
+  font-weight: 500;
   cursor: pointer;
 
   &:hover, &:focus {
@@ -92,11 +94,15 @@ export const Link = styled.a`
   }
 `
 
+export const CheckboxEl = styled(CheckboxComponent)`
+`
+
 export const Checkbox = styled.div`
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
+  display: flex;
 
   ${Link} {
     text-decoration: underline;
