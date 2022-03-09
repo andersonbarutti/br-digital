@@ -1,7 +1,6 @@
 import React from 'react'
 
 const propTypes = {}
-
 const defaultProps = {}
 
 const <%= pascalEntityName %> = ({ data, t }) => {
