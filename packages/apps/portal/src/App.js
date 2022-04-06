@@ -11,8 +11,9 @@ const App = ({ store, settings, permissions }) => {
     <Theme {...settings}>
       <Provider store={store}>
           <BrowserRouter>
-            <Suspense fallback={<SuspenseLoading />}>
-              <Routes permissions={permissions} />
+          <Suspense fallback={<SuspenseLoading />}>
+              <></>
+              {/* <Routes permissions={permissions} /> */}
             </Suspense>
           </BrowserRouter>
       </Provider>
