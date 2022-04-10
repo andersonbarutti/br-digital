@@ -4,9 +4,9 @@ import { BrowserRouter } from 'react-router-dom'
 import { Theme } from '@project/components'
 import { SuspenseLoading } from './layouts/CoreLayout'
 
-// import Routes from './routes'
+import Routes from './routes'
 
-const App = ({ store, settings }) => {
+const App = ({ store, settings, permissions }) => {
   return (
     <Theme {...settings}>
       <Provider store={store}>
