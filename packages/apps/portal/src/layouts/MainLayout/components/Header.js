@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { isUserSignedIn } from '@project/core/src/modules/Session/User'
 import * as S from './Header.styles'
 import Logo from '../assets/biologo.png'
 import MenuIcon from '../assets/menu.png'
 import CloseIcon from '../assets/close.png'
+import AvatarIcon from '../assets/avatar.png'
+import ExpandIcon from '../assets/expand.png'
 
 const MENU_ITEMS = [
   { name: 'Horários de treinos', path: '/' },
@@ -14,6 +17,7 @@ const MENU_ITEMS = [
 
 export const MobileMenu = props => {
   const { onClose } = props
+  // const isAuthenticated = isUserSignedIn()
 
   return (
     <S.MobileMenu>
@@ -23,7 +27,7 @@ export const MobileMenu = props => {
         </S.MobileMenuClose>
         <S.MobileMenuHeader>
           <S.UserName>
-            Olá Danilo
+            Olá Anderson
           </S.UserName>
           <S.Plan>
             <S.PlanTitle>
@@ -55,9 +59,15 @@ export const MobileMenu = props => {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const isAuthenticated = isUserSignedIn()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen)
   }
 
   return (
@@ -79,7 +89,44 @@ export default function Header() {
                 </S.NavLink>
               </S.NavItem>
             ))}
-            <S.NavItem><S.NavLink to='/entrar'>Entrar</S.NavLink></S.NavItem>
+            {!isAuthenticated && <S.NavItem><S.NavLink to='/entrar'>Entrar</S.NavLink></S.NavItem>}
+            {isAuthenticated && <S.NavItem>
+              <S.UserMenu onClick={toggleDropdown}>
+                <S.UserMenuAvatar>
+                  <img src={AvatarIcon} alt='menu' width='12' height='12' />
+                  <S.AlertIcon />
+                </S.UserMenuAvatar>
+                <S.UserMenuName>
+                  Olá Anderson
+                </S.UserMenuName>
+                <S.UserMenuExpandIcon>
+                  <img src={ExpandIcon} alt='menu' width='11' height='6'/>
+                </S.UserMenuExpandIcon>
+
+                {isDropdownOpen && <S.UserMenuDropdown>
+                  <S.UserMenuDropdownContent>
+                    <S.UserMenuDropdownHeader>
+                      <S.UserMenuDropdownName>
+                        Anderson
+                      </S.UserMenuDropdownName>
+                      <S.UserMenuDropdownPlan>
+                        Plano Platinum
+                      </S.UserMenuDropdownPlan>
+                      <S.UserMenuDropdownBranch>
+                        Unidade Paulista
+                      </S.UserMenuDropdownBranch>
+                    </S.UserMenuDropdownHeader>
+                    <S.UserMenuDropdownNavList>
+                      <S.UserMenuDropdownNavItem>
+                        <S.UserMenuDropdownNavLink to='/'>
+                          Sair
+                        </S.UserMenuDropdownNavLink>
+                      </S.UserMenuDropdownNavItem>
+                    </S.UserMenuDropdownNavList>
+                  </S.UserMenuDropdownContent>
+                </S.UserMenuDropdown>}
+              </S.UserMenu>
+            </S.NavItem>}
           </S.NavList>
         </S.Nav>
       </S.Content>

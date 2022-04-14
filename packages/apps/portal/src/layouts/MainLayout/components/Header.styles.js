@@ -137,3 +137,98 @@ export const MobileMenuLink = styled(Link)`
   }
 `
 
+export const UserMenu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 9999;
+
+  /* &:hover {
+    opacity: 0.8;
+  } */
+`
+export const UserMenuAvatar = styled.div`
+  margin-right: 8px;
+  position: relative;
+`
+export const AlertIcon = styled.div`
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #DF3C3C;
+`
+export const UserMenuName = styled.div`
+  margin-right: 4px;
+`
+export const UserMenuExpandIcon = styled.div``
+
+export const UserMenuDropdown = styled.div`
+  background: ${props => props.theme.colors.surface};
+  color: ${props => props.theme.colors.onSurface};
+
+  position: absolute;
+  bottom: -177px;
+  width: 153px;
+  right: 0;
+  z-index: 9999;
+`
+export const UserMenuDropdownContent = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const UserMenuDropdownHeader = styled.div`
+  padding: 16px 16px 6px;
+
+`
+export const UserMenuDropdownName = styled.div`
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+`
+export const UserMenuDropdownPlan = styled.div`
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 5px;
+  font-weight: 500;
+`
+export const UserMenuDropdownBranch = styled.div`
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+`
+
+export const UserMenuDropdownNavList = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const UserMenuDropdownNavItem = styled.div`
+  width: 100%;
+`
+export const UserMenuDropdownNavLink = styled.div`
+  padding: 16px;
+  width: 100%;
+  cursor: pointer;
+
+  font-size: 12px;
+  line-height: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  &:hover {
+    background-color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.onPrimary};
+  }
+`

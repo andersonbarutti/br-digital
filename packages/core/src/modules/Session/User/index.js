@@ -4,7 +4,7 @@ import { set, get } from './modules/storage'
 
 export const isUserSignedIn = () => !!get()
 
-export const getUser = async () => get()
+export const getUser = () => get()
 
 export const init = async () => {
   // const tokens = await getTokens()

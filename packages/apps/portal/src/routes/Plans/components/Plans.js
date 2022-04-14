@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Modal from 'react-modal'
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -35,6 +36,7 @@ export const Plans = props => {
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const [content, setContent] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     load(props)
@@ -96,7 +98,7 @@ export const Plans = props => {
                       <S.PlanType>{item.displayName}</S.PlanType>
                       <S.Price><span>R$</span><strong>{item.price}</strong></S.Price>
                       <S.Description>{item.shortDescription}</S.Description>
-                      <S.Button>Compre aqui</S.Button>
+                      <S.Button onClick={() => navigate('/cart')}>Compre aqui</S.Button>
                       <S.Contract onClick={() => openModal(item)}>Consulte o regulamento</S.Contract>
                     </S.Resume>
                     <S.Footer>
